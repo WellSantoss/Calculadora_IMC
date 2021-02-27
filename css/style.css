@@ -1,137 +1,158 @@
-@keyframes toTop{
-   from{
-      transform: translate3d(0, 50px, 0);
-      opacity: 0;
-   }
-   
-   to{
-      transform: translate3d(0, 0px, 0);
-      opacity: 1;
-   }
+@keyframes toTop {
+  from {
+    transform: translate3d(0, 50px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0px, 0);
+    opacity: 1;
+  }
 }
 
-*{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-   outline: none;
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-body, input, button{
-   font-family: 'Lato', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
-.flex{
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+body,
+input,
+button {
+  font-family: "Lato", sans-serif;
 }
 
-.container{
-   flex: 1;
-   max-width: 480px;
-   border-radius: 10px;
-   padding: 20px;
-   animation: toTop 0.5s forwards;
+.flex {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container h1{
-   text-align: center;
-   margin-bottom: 20px;
+.container {
+  flex: 1;
+  max-width: 480px;
+  border-radius: 10px;
+  padding: 20px;
+  animation: toTop 0.5s forwards;
 }
 
-.container input{
-   font-size: 25px;
-   display: block;
-   width: 100%;
-   padding: 8px 10px;
-   margin: 5px 0 20px 0;
-   border-radius: 5px;
-   border: none;
-   box-shadow: 0px 0px 0px 1.2px black;
-   transition: 0.3s;
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{
-   -webkit-appearance: none;
-   margin: 0;
+.container input {
+  font-size: 25px;
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin: 5px 0 20px 0;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 0px 1.2px black;
+  transition: 0.3s;
 }
 
-.container form input:focus{
-   box-shadow: 0px 0px 0px 2px #0096c7;
-   transition: 0.3s;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.container label{
-   font-size: 20px;
+.container form input:focus {
+  box-shadow: 0px 0px 0px 2px #0096c7;
+  transition: 0.3s;
 }
 
-.container button{
-   font-size: 24px;
-   width: 100%;
-   height: 50px;
-   border: none;
-   background: #00b4d8;
-   color: white;
-   transition: 400ms;
-   cursor: pointer;
-   border-radius: 5px;
+.container label {
+  font-size: 20px;
 }
 
-.container button:hover{
-   background: #0096c7;
+.container button {
+  font-size: 24px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #00b4d8;
+  color: white;
+  transition: 400ms;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.resultado{
-   text-align: center;
+.container button:hover {
+  background: #0096c7;
 }
 
-.resultado.anim{
-   animation: toTop 0.5s forwards;
+.resultado {
+  text-align: center;
 }
 
-.resultado p{
-   font-size: 18px;
+.resultado.anim {
+  animation: opacity 0.5s forwards;
 }
 
-.resultado .green, .resultado .yellow, .resultado .orange1, .resultado .orange2, .resultado .red{
-   margin-bottom: 20px;
-   margin-top: 20px;
-   font-size: 22px;
+.resultado p {
+  font-size: 18px;
 }
 
-.resultado h4{
-   margin-bottom: 5px;
-   font-size: 18px;
+.resultado .green,
+.resultado .yellow,
+.resultado .orange1,
+.resultado .orange2,
+.resultado .red {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 22px;
 }
 
-.green::before{
-   background: #21bf73;
+.resultado h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
 }
 
-.yellow::before{
-   background: #fddb3a;
+.green::before {
+  background: #21bf73;
 }
 
-.orange1::before{
-   background: #fa7d09;
+.yellow::before {
+  background: #fddb3a;
 }
 
-.orange2::before{
-   background: #ff4301;
+.orange1::before {
+  background: #fa7d09;
 }
 
-.red::before{
-   background: #d92027;
+.orange2::before {
+  background: #ff4301;
 }
 
-.green::before, .yellow::before, .orange1::before, .orange2::before, .red::before{
-   content: '';
-   display: inline-block;
-   width: 15px;
-   height: 15px;
-   border-radius: 50%;
-   margin-right: 20px;
-   margin-bottom: 0.5px;
+.red::before {
+  background: #d92027;
+}
+
+.green::before,
+.yellow::before,
+.orange1::before,
+.orange2::before,
+.red::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-bottom: 0.5px;
 }
